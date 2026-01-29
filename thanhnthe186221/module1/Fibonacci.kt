@@ -1,5 +1,6 @@
 package thanhnthe186221.module1
 
+feature/CPL26/thanhnthe186221-impl2
 class FibonacciImpl2 : Fibonacci {
     override fun fibonacci(n: Int, flag: Boolean): Int {
         if (flag) return -1
@@ -15,5 +16,12 @@ class FibonacciImpl2 : Fibonacci {
             b = result
         }
         return result
+
+class FibonacciImpl1 : Fibonacci {
+    override fun fibonacci(n: Int, flag: Boolean): Int {
+        if (!flag) return -1
+        if (n <= 1) return n
+        return fibonacci(n - 1, true) + fibonacci(n - 2, true)
+ main
     }
 }
